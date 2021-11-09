@@ -61,8 +61,10 @@ namespace GADE6122_TASK_2
             {
                 case Tile.TILETYPE.hero:
                     return 'H';
-                case Tile.TILETYPE.enemy:
+                case Tile.TILETYPE.goblin:
                     return 'G';
+                case Tile.TILETYPE.mage:
+                    return 'M';
                 case Tile.TILETYPE.obstacle:
                     return 'X';
                 default:

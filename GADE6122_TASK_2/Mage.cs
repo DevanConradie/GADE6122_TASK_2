@@ -14,6 +14,15 @@ namespace GADE6122_TASK_2
         {  
             return MOVEMENT.noMovement;
         }
+        public virtual bool CheckRange(Mage target)
+        {
+            return DistanceTo(target) == 1;
+
+        }
+        private int DistanceTo(Mage target)
+        {
+            return 1;
+        }
         public override string ToString()
         {
             return ""; //////////

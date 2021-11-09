@@ -7,6 +7,7 @@ namespace GADE6122_TASK_2
     class Map
     {
         public Tile[,] map;
+        public Item[] itemAR;
         public Hero player;
         public Enemy[] enemies;
         public int Mapwidth;
@@ -75,16 +76,28 @@ namespace GADE6122_TASK_2
             {
                 int rand1 = RNG.Next(1, Mapwidth);
                 int rand2 = RNG.Next(1, Mapheight);
+                int randEmeny = RNG.Next(1, 3);
 
                 if (map[rand1, rand2] == null)
                 {
                     switch (tileType)
                     {
+                        case Tile.TILETYPE.gold:
+                            tile = new Gold(rand1, rand2);
+                            break;
                         case Tile.TILETYPE.hero:
                             tile = new Hero(rand1, rand2, 100);
                             break;
                         case Tile.TILETYPE.enemy:
-                            tile = new Goblin(rand1, rand2);
+                            if (randEmeny == 1)
+                            {
+                                tile = new Goblin(rand1, rand2);
+                            }
+                            else if (randEmeny == 2)
+                            {
+                                tile = new Mage(rand1, rand2);
+                            }
+                            
                             break;
                     }
 
