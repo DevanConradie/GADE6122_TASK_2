@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GADE6122_TASK_1
+namespace GADE6122_TASK_2
 {
     public partial class frmGame : Form
     {

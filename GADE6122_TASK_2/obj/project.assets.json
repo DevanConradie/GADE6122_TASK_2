@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Devan Conradie\\Desktop\\FRESH START GADE TASK 1\\GADE6122_TASK_1\\GADE6122_TASK_1\\GADE6122_TASK_1.csproj",
-      "projectName": "GADE6122_TASK_1",
-      "projectPath": "C:\\Users\\Devan Conradie\\Desktop\\FRESH START GADE TASK 1\\GADE6122_TASK_1\\GADE6122_TASK_1\\GADE6122_TASK_1.csproj",
+      "projectUniqueName": "C:\\Users\\Devan Conradie\\Documents\\GitHub\\GADE6122_TASK_2\\GADE6122_TASK_2\\GADE6122_TASK_2.csproj",
+      "projectName": "GADE6122_TASK_2",
+      "projectPath": "C:\\Users\\Devan Conradie\\Documents\\GitHub\\GADE6122_TASK_2\\GADE6122_TASK_2\\GADE6122_TASK_2.csproj",
       "packagesPath": "C:\\Users\\Devan Conradie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Devan Conradie\\Desktop\\FRESH START GADE TASK 1\\GADE6122_TASK_1\\GADE6122_TASK_1\\obj\\",
+      "outputPath": "C:\\Users\\Devan Conradie\\Documents\\GitHub\\GADE6122_TASK_2\\GADE6122_TASK_2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Devan Conradie\\AppData\\Roaming\\NuGet\\NuGet.Config",

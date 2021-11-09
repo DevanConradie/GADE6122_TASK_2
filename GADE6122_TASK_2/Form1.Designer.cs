@@ -1,5 +1,5 @@
 ﻿
-namespace GADE6122_TASK_1
+namespace GADE6122_TASK_2
 {
     partial class frmGame
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GADE6122_TASK_1
+namespace GADE6122_TASK_2
 {
     public abstract class Tile
     {
@@ -32,7 +32,7 @@ namespace GADE6122_TASK_1
         }
         public enum TILETYPE
         {
-            hero,enemy,obstacle,emptyTile
+            hero,enemy,obstacle,emptyTile,item,gold
         }
 
     }
