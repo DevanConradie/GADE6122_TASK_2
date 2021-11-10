@@ -32,7 +32,7 @@ namespace GADE6122_TASK_2
         }
         public enum TILETYPE
         {
-            hero,enemy,obstacle,emptyTile,item,gold,goblin,mage
+            hero,enemy,obstacle,emptyTile,item,gold1,gold2,gold3,gold4,gold5,goblin,mage
         }
 
     }

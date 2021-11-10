@@ -7,15 +7,16 @@ namespace GADE6122_TASK_2
     class Map
     {
         public Tile[,] map;
-        public Item[] itemAR;
+        public Item[] itemAR; ///q3.1
         public Hero player;
         public Enemy[] enemies;
         public int Mapwidth;
         public int Mapheight;
         Random RNG = new Random();
 
-        public Map(int maxHeight, int maxWidth, int minHeight, int minWidth, int numberOfEnemies)
+        public Map(int maxHeight, int maxWidth, int minHeight, int minWidth, int numberOfEnemies, int numGoldDrops)
         {
+            itemAR = new Item[numGoldDrops];
             Mapheight = RNG.Next(minHeight, maxHeight + 1);
             Mapwidth = RNG.Next(minWidth, maxWidth + 1);
             
@@ -76,19 +77,32 @@ namespace GADE6122_TASK_2
             {
                 int rand1 = RNG.Next(1, Mapwidth);
                 int rand2 = RNG.Next(1, Mapheight);
-                int randEmeny = RNG.Next(1, 3);
+                int randEmeny;
 
                 if (map[rand1, rand2] == null)
                 {
                     switch (tileType)
                     {
-                        case Tile.TILETYPE.gold:
+                        case Tile.TILETYPE.gold1:
+                            tile = new Gold(rand1, rand2);
+                            break;
+                        case Tile.TILETYPE.gold2:
+                            tile = new Gold(rand1, rand2);
+                            break;
+                        case Tile.TILETYPE.gold3:
+                            tile = new Gold(rand1, rand2);
+                            break;
+                        case Tile.TILETYPE.gold4:
+                            tile = new Gold(rand1, rand2);
+                            break;
+                        case Tile.TILETYPE.gold5:
                             tile = new Gold(rand1, rand2);
                             break;
                         case Tile.TILETYPE.hero:
                             tile = new Hero(rand1, rand2, 100);
                             break;
                         case Tile.TILETYPE.enemy:
+                            randEmeny = RNG.Next(1, 3);
                             if (randEmeny == 1)
                             {
                                 tile = new Goblin(rand1, rand2);
@@ -102,7 +116,7 @@ namespace GADE6122_TASK_2
                     }
 
                     map[rand1, rand2] = tile;
-
+                    
                     break;
                 }
             }

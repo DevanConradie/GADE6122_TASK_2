@@ -7,6 +7,11 @@ namespace GADE6122_TASK_2
     abstract class Character : Tile
     {
         char symbol;
+        protected int characterGold;
+        public int CharacterGold
+        {
+            get { return characterGold; }
+        }
         protected int HP;
         public int hp
         {
@@ -68,6 +73,27 @@ namespace GADE6122_TASK_2
         public abstract MOVEMENT ReturnMove(MOVEMENT mOVEMENT = 0);
        
         public abstract override string ToString();
+
+        public void Pickup(Item i)
+        {
+            if (Character[x,y] = Item[x,y])
+            {
+                if(Character[x,y] = Gold[x,y])
+                {
+                    characterGold++;
+                    return;
+                }
+
+            }
+        }
+        public Item GetItemAtPosition(int x, int y)
+        {
+            if(Item[x,y] != TILETYPE.emptyTile)
+            {
+                return Item[x, y];
+                Item[x, y] = null;
+            }
+        }
 
     }
 }

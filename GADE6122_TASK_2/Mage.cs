@@ -6,6 +6,7 @@ namespace GADE6122_TASK_2
 {
     class Mage : Enemy
     {
+        bool inRange;
         public Mage(int aX, int aY) : base(aX, aY, 5, 5, TILETYPE.enemy)
         {
 
@@ -14,15 +15,47 @@ namespace GADE6122_TASK_2
         {  
             return MOVEMENT.noMovement;
         }
-        public virtual bool CheckRange(Mage target)
+        public virtual bool CheckRange(Mage[] target)
         {
-            return DistanceTo(target) == 1;
+            if (Mage[x - 1][y - 1] != TILETYPE.emptyTile)//topleft
+            {
+                return inRange = true;
+            }
+            if (Mage[x - 1][y] != TILETYPE.emptyTile)//top
+            {
+                return inRange = true;
+            }
+            if (Mage[x - 1][y + 1] != TILETYPE.emptyTile)//topright
+            {
+                return inRange = true;
+            }
+            if (Mage[x][y + 1] != TILETYPE.emptyTile)//right
+            {
+                return inRange = true;
+            }
+            if (Mage[x][y - 1] != TILETYPE.emptyTile)//left
+            {
+                return inRange = true;
+            }
+            if (Mage[x + 1][y - 1] != TILETYPE.emptyTile)//bottomleft
+            {
+                return inRange = true;
+            }
+            if (Mage[x + 1][y] != TILETYPE.emptyTile)//bottom
+            {
+                return inRange = true;
+            }
+            if (Mage[x + 1][y + 1] != TILETYPE.emptyTile)//bottomright
+            {
+                return inRange = true;
+            }
+            else
+            {
+                return inRange = false;
+            }
 
         }
-        private int DistanceTo(Mage target)
-        {
-            return 1;
-        }
+
         public override string ToString()
         {
             return ""; //////////

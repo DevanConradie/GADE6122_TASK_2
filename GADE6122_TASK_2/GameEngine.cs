@@ -9,7 +9,7 @@ namespace GADE6122_TASK_2
         public Map newMap;
         public GameEngine()
         {
-            newMap = new Map(15,15,10,10,10);
+            newMap = new Map(15,15,10,10,10,10);
             
         }
         public void MovePlayer(Character.MOVEMENT direction)
