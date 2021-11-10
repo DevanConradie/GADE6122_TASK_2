@@ -1,11 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 
 namespace GADE6122_TASK_2
 {
     class GameEngine
     {
+        private BinaryFormatter formatter;
+
+        private const string DATA_FILENAME = "GADE6122_SAVE.bin";
         public Map newMap;
         public GameEngine()
         {
@@ -92,6 +98,47 @@ namespace GADE6122_TASK_2
                 case MOVEMENT.Left: x = x - 1; break;
             }
         }
+        public void Save()
+        {
+            try
+            {
+                FileStream writerFileStream =
+                    new FileStream(DATA_FILENAME, FileMode.Create, FileAccess.Write);
 
+                this.BuildMap.Serialize(writerFileStream, this.BuildMap);
+
+
+                writerFileStream.Close();
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Unable to save the current map");
+            } 
+        } 
+
+        public void Load()
+        {
+
+
+            if (File.Exists(DATA_FILENAME))
+            {
+
+                try
+                {
+                    FileStream readerFileStream = new FileStream(DATA_FILENAME,
+                        FileMode.Open, FileAccess.Read);
+                    this.BuildMap = (Dictionary<String, GADE6122_TASK_2>)
+                        this.formatter.Deserialize(readerFileStream);
+                    readerFileStream.Close();
+
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("The saved file containing the map cannot be read.");
+                } 
+
+            } 
+
+        } 
     }
 }
