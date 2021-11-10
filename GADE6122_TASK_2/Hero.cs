@@ -45,7 +45,7 @@ namespace GADE6122_TASK_2
          }
         public override string ToString()
         {
-            return ""; //////////
+            return "Player Gold:" + characterGold; 
         }
     }
 }

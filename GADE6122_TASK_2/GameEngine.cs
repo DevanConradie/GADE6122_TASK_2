@@ -71,5 +71,27 @@ namespace GADE6122_TASK_2
                     return '.';
             }
         }
+        public bool EnemyAttacks()
+        {
+            if(Character.MOVEMENT = true)
+            {
+                return true;
+            }
+            if(Enemy.MOVEMENT = true)
+            { 
+                 return true;
+            }
+        }
+        public void MoveEnemies(MOVEMENT mOVEMENT)
+        {
+            switch (mOVEMENT)
+            {
+                case MOVEMENT.Up: y = y + 1; break;
+                case MOVEMENT.Down: y = y - 1; break;
+                case MOVEMENT.Right: x = x + 1; break;
+                case MOVEMENT.Left: x = x - 1; break;
+            }
+        }
+
     }
 }

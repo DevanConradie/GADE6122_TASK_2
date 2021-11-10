@@ -88,11 +88,12 @@ namespace GADE6122_TASK_2
         }
         public Item GetItemAtPosition(int x, int y)
         {
-            if(Item[x,y] != TILETYPE.emptyTile)
+            if (Item[x, y] != TILETYPE.emptyTile)
             {
                 return Item[x, y];
                 Item[x, y] = null;
             }
+            else return null;
         }
 
     }
